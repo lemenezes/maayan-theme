@@ -468,24 +468,28 @@ header.site-header a:hover,
 
 /* Botão de busca */
 .hp-form--listing-search button,
-.hp-form--listing-search input[type='submit'] {
-  background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
-  color: white;
-  padding: 1rem 2.5rem;
-  border: none;
-  border-radius: 8px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  white-space: nowrap;
-  box-shadow: 0 8px 20px rgba(14, 165, 233, 0.2);
-  font-size: 0.95rem;
+.hp-form--listing-search input[type='submit'],
+.hp-form--listing-search button.button,
+.hp-form--listing-search input[type='submit'].button {
+  background: linear-gradient(135deg, var(--color-primary), var(--color-accent)) !important;
+  color: white !important;
+  padding: 1rem 2.5rem !important;
+  border: none !important;
+  border-radius: 8px !important;
+  font-weight: 600 !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+  white-space: nowrap !important;
+  box-shadow: 0 8px 20px rgba(14, 165, 233, 0.2) !important;
+  font-size: 0.95rem !important;
 }
 
 .hp-form--listing-search button:hover,
-.hp-form--listing-search input[type='submit']:hover {
-  box-shadow: 0 12px 30px rgba(14, 165, 233, 0.3);
-  transform: translateY(-2px);
+.hp-form--listing-search input[type='submit']:hover,
+.hp-form--listing-search button.button:hover,
+.hp-form--listing-search input[type='submit'].button:hover {
+  box-shadow: 0 12px 30px rgba(14, 165, 233, 0.3) !important;
+  transform: translateY(-2px) !important;
 }
 
 /* Vendor search form */
@@ -1152,23 +1156,23 @@ section {
    ========================================================================== */
 
 .site-footer {
-  background: #FAFBFC;
+  background: white;
   color: var(--color-text);
   padding: 4rem 2rem 2rem;
   margin-top: 4rem;
   position: relative;
   z-index: 1;
-  border-top: 1px solid var(--color-border);
+  border-top: 1px solid #E8EDF2;
 }
 
 /* Widgets footer */
 .footer-widgets {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 3rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 4rem;
   margin-bottom: 2rem;
   padding-bottom: 2rem;
-  max-width: 900px;
+  max-width: 1000px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -1181,12 +1185,13 @@ section {
 }
 
 .widget--footer .widget-title {
-  font-size: 1rem;
-  font-weight: 600;
+  font-size: 0.95rem;
+  font-weight: 700;
   margin-bottom: 1.5rem;
-  padding-bottom: 0.75rem;
-  border-bottom: 2px solid var(--color-primary);
+  padding-bottom: 0;
+  border-bottom: none;
   color: var(--color-text);
+  letter-spacing: -0.01em;
 }
 
 .footer-widgets ul {
@@ -1196,19 +1201,19 @@ section {
 }
 
 .footer-widgets li {
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.875rem;
 }
 
 .footer-widgets a {
-  color: var(--color-text-light);
+  color: #64748B;
   text-decoration: none;
   font-size: 0.9rem;
   transition: all 0.3s ease;
+  display: inline-block;
 }
 
 .footer-widgets a:hover {
   color: var(--color-primary);
-  padding-left: 0;
 }
 
 /* Footer navbar */
@@ -1217,11 +1222,11 @@ section {
   justify-content: space-between;
   align-items: center;
   gap: 2rem;
-  border-top: 1px solid var(--color-border);
+  border-top: 1px solid #E8EDF2;
   padding-top: 2rem;
   margin-top: 2rem;
   flex-wrap: wrap;
-  max-width: 900px;
+  max-width: 1000px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -1241,7 +1246,7 @@ section {
 /* Copyright */
 .footer-navbar__copyright {
   font-size: 0.85rem;
-  color: var(--color-text-light);
+  color: #94A3B8;
 }
 
 /* Menu footer */
@@ -1254,10 +1259,11 @@ section {
 }
 
 .footer-navbar__menu a {
-  color: var(--color-text-light);
+  color: #64748B;
   text-decoration: none;
   font-size: 0.9rem;
   transition: all 0.3s ease;
+  display: inline-block;
 }
 
 .footer-navbar__menu a:hover {
@@ -1266,11 +1272,25 @@ section {
 
 /* Footer bottom */
 .footer-bottom {
-  border-top: 1px solid var(--color-border);
+  border-top: 1px solid #E8EDF2;
   padding-top: 1.5rem;
   text-align: center;
   font-size: 0.85rem;
-  color: var(--color-text-light);
+  color: #94A3B8;
+}
+
+/* Remove amarelo/cores antigas do ListingHive */
+.site-footer a,
+.site-footer button,
+.site-footer input[type='button'],
+.site-footer input[type='submit'] {
+  color: inherit !important;
+}
+
+.site-footer button,
+.site-footer input[type='submit'] {
+  background: var(--color-primary) !important;
+  border-color: var(--color-primary) !important;
 }
 
 .site-footer a,
